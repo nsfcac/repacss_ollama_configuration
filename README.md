@@ -87,7 +87,7 @@ From a login node (not the GPU node), check if the Ollama server is running:
 ```bash
 curl http://<hostname>:<port>
 ```
-You can find a host.txt and port.txt in your ~/ollama folder/ Replace <hostname> with your GPU node's hostname and <port> with your Ollama server's port number. 
+You can find a host.txt and port.txt in your <your_ollama_working_dir>/ollama folder/ Replace <hostname> with your GPU node's hostname and <port> with your Ollama server's port number. 
 
 You should see:
 
