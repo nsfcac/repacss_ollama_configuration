@@ -34,15 +34,13 @@ interactive -p h100 -t 02:00:00 -g 1
 
 ---
 
-### Step 2: Clone the Ollama_repacss Repository
-
-Clone this repository to your project space. On REPACSS, we suggest you to use home directory.
+### Step 2: Choose one directory as your Ollama working directory and then clone the Ollama configuration Repository
 
 we are using ollama 0.6.8 in this version:
 
 ```bash
 cd $HOME
-cd <your_project>
+cd <your_working_dir>
 git clone https://github.com/nsfcac/ollama_repacss.git
 cd ollama_repacss
 ```
