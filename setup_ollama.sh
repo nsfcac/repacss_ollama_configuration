@@ -12,12 +12,12 @@ ABSOLUTE_DOWNLOAD_DIR=$(realpath "$DOWNLOAD_DIR")
 ABSOLUTE_OLLAMA_SIF_PATH=$(realpath "$OLLAMA_SIF_PATH")
 
 # Pull Ollama container (version 0.6.8 recommended)
-echo "Step 1: Pulling Ollama container (version 0.6.8 recommended) to $ABSOLUTE_DOWNLOAD_DIR"
+echo "🚀 Step 1: Pulling Ollama container (version 0.6.8 recommended) to $ABSOLUTE_DOWNLOAD_DIR"
 apptainer pull "$OLLAMA_SIF_PATH" docker://ollama/ollama:0.6.8
-echo "Step 1 finished!"
+echo "✅ Step 1 finished!"
 
 # Set Up The directory for Ollama  
-echo "Step 2: Setting up the directory for Ollama"
+echo "🚀 Step 2: Setting up the directory for Ollama"
 
 # Auto-detect group name by checking where user's home directory is located
 
@@ -38,13 +38,13 @@ echo "Step 2: Setting up the directory for Ollama"
 #     fi
 # fi
 
-# Step 1: Export environment variable - use parent directory
+# Step 2: Export environment variable - use parent directory
 export SCRATCH_BASE=".."
 ABSOLUTE_SCRATCH_BASE=$(realpath "$SCRATCH_BASE")
-echo "Step 2 finished!"
+echo "✅ Step 2 finished!"
 
 # Step 3: This function will pick an available random port and start Ollama server:
-echo "Step 3: Try to configure the environment for Ollama"
+echo "🚀 Step 3: Try to configure the environment for Ollama"
 source ollama.sh
 
 
@@ -53,12 +53,12 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 sleep 3
-echo "Step 3 finished!"
+echo "✅ Step 3 finished!"
 
-# Step 3: Start ollama serve in background
-echo "Step 4: Trying to start Ollama server:"
+# Step 4: Start ollama serve in background
+echo "🚀 Step 4: Trying to start Ollama server:"
 ollama serve > "${SCRATCH_BASE}/ollama/ollama.log" 2>&1 &
-echo "Step 4: Ollama server started in background."
-echo "It is ready to use now!"
-echo "Try to use 'ollama list' to see the available models."
-echo "Try to use 'ollama run <model_name>' to run the model."
+echo "✅ Step 4: Ollama server started in background."
+echo "🎉 It is ready to use now!"
+echo "📋 Try to use 'ollama list' to see the available models."
+echo "🏃 Try to use 'ollama run <model_name>' to run the model."
