@@ -43,7 +43,7 @@ cd $HOME
 mkdir <your_ollama_working_dir>
 cd <your_ollama_working_dir>
 git clone https://github.com/nsfcac/repacss_ollama_configuration.git
-cd ollama_repacss
+cd repacss_ollama_configuration
 ```
 
 ### Step 3: Set up and launch the Ollama sever:
