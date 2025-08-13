@@ -42,7 +42,7 @@ we are using ollama 0.6.8 in this version:
 cd $HOME
 mkdir <your_ollama_working_dir>
 cd <your_ollama_working_dir>
-git clone https://github.com/nsfcac/ollama_repacss.git
+git clone https://github.com/nsfcac/repacss_ollama_configuration.git
 cd ollama_repacss
 ```
 
