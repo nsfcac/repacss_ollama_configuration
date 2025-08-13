@@ -6,10 +6,11 @@ A hands-on guide and accompanying scripts for running Ollama (local LLM inferenc
 
 This repository contains:
 
-- **`ollama.sh`**: A helper script to launch and manage the Ollama server.  
+- **`setup_ollama.sh`**: A setup script to install and launch the Ollama server.  
 - **`test.py`**: An example Python script to verify your Ollama server is working.
 - **`tutorial.ipynb`**: A Jupyter notebook that connects to your Ollama server.
 - **`requirements.txt`**: Python libraries needed to run the notebook.
+- **`ollama.sh`**: A script to set the configurations of the Ollama server.  
 
 ## Prerequisites
 
@@ -46,39 +47,15 @@ git clone https://github.com/nsfcac/ollama_repacss.git
 cd ollama_repacss
 ```
 
-### Step 3:Download ollama and Configure Environment
-
-First, Please download the ollama (we suggest to use ollama 0.6.8 version for now) and then set SCRATCH_BASE environment variable:
+### Step 3: Set up and launch the Ollama sever:
 
 ```bash
-apptainer pull ollama.sif docker://ollama/ollama:0.6.8
-
-export SCRATCH_BASE=/mnt/<Your Group Name>/home/$USER
+. setup_ollama.sh
 ```
 
 ---
 
-### Step 4: Source the Ollama Wrapper
-
-This sets up a wrapper function to easily start the Ollama server and issue commands:
-
-```bash
-source ollama.sh
-```
-
----
-
-### Step 5: Launch Ollama sever:
-
-Ollama server has been launched in the background:
-
-```bash
-ollama serve &
-```
-
----
-
-### Step 7: We are using a shared LLM directory on REPACSS. 
+### Step 4: We are using a shared LLM directory on REPACSS. 
 
 Check the model list first and use the existing models:
 ```bash
@@ -93,7 +70,7 @@ ollama pull llama3.1:8b
 ```
 ---
 
-### Step 8: Run Inference
+### Step 5: Run Inference
 
 Test the model directly with a simple prompt:
 
@@ -104,7 +81,7 @@ ollama run llama3.1:8b
 
 ---
 
-### Step 9: Verify Server Status from Login Node
+### Step 6: Verify Server Status from Login Node
 
 From a login node (not the GPU node), check if the Ollama server is running:
 
